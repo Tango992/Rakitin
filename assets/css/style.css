@@ -1,12 +1,12 @@
 /*
  * Globals
  */
-.card {
+.gallery-card {
   position: relative;
   top: 0px;
   transition: top 0.3s, background-color 0.3s;
 }
-.card:hover {
+.gallery-card:hover {
   top: -5px;
   background-color: #5a23c8;
   transition: top 0.5s ease, background-color 0.3s;

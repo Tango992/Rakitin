@@ -1,7 +1,21 @@
 /*
  * Globals
  */
+.card {
+  position: relative;
+  top: 0px;
+  transition: top 0.3s, background-color 0.3s;
+}
+.card:hover {
+  top: -5px;
+  background-color: #5a23c8;
+  transition: top 0.5s ease, background-color 0.3s;
+}
 
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
 
 /* Custom default button */
 .btn-light,
@@ -55,7 +69,6 @@ body {
   border-bottom-color: #fff;
 }
 
-
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -69,7 +82,6 @@ body {
     font-size: 3.5rem;
   }
 }
-
 
 .nav-scroller {
   position: relative;
@@ -105,6 +117,7 @@ body {
   --bs-btn-active-bg: #5a23c8;
   --bs-btn-active-border-color: #5a23c8;
 }
+
 .bd-mode-toggle {
   z-index: 1500;
 }

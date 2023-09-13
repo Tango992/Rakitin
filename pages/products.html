@@ -32,7 +32,7 @@
             <div class="card col-9 mx-auto">
                 <div class="row g-0">
                     <div class="col-md-2">
-                        <img src="https://zeevector.com/wp-content/uploads/Intel-Logo-Transparent-PNG-Vector.png"
+                        <img id="platform-img" src="../assets/images/product/thumbnail.jpg"
                             class="img-fluid rounded-start cart-icon" alt="CPU icon">
                     </div>
                     <div class="col-md-8">
@@ -52,21 +52,21 @@
             <div class="card col-9 mx-auto">
                 <div class="row g-0">
                     <div class="col-md-2">
-                        <img src="https://zeevector.com/wp-content/uploads/Intel-Logo-Transparent-PNG-Vector.png"
+                        <img id="cpu-img" src="../assets/images/product/thumbnail.jpg"
                             class="img-fluid rounded-start cart-icon" alt="CPU icon">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body text-start">
                             <h5 class="card-title">CPU</h5>
                             <form class="col-md-6 mb-3">
-                                <select class="form-control select2">
+                                <select id="cpu" class="form-control">
                                     <option selected disabled>Select CPU</option>
-                                    <option value="1">Intel Core i5</option>
-                                    <option value="2">Intel Core i7</option>
-                                    <option value="3">Intel Core i9</option>
-                                    <option value="4">AMD Ryzen 5</option>
-                                    <option value="5">AMD Ryzen 7</option>
-                                    <option value="6">AMD Ryzen 7</option>
+                                    <option hidden id="cpu1" value="1">Intel Core i5</option>
+                                    <option hidden id="cpu2" value="2">Intel Core i7</option>
+                                    <option hidden id="cpu3" value="3">Intel Core i9</option>
+                                    <option hidden id="cpu4" value="4">AMD Ryzen 5</option>
+                                    <option hidden id="cpu5" value="5">AMD Ryzen 7</option>
+                                    <option hidden id="cpu6" value="6">AMD Ryzen 9</option>
                                 </select>
                             </form>
                             <p>Lorem Ipsum</p>
@@ -80,7 +80,7 @@
             <div class="card col-9 mx-auto">
                 <div class="row g-0">
                     <div class="col-md-2">
-                        <img src="https://zeevector.com/wp-content/uploads/Intel-Logo-Transparent-PNG-Vector.png"
+                        <img src="../assets/images/product/thumbnail.jpg"
                             class="img-fluid rounded-start cart-icon" alt="CPU icon">
                     </div>
                     <div class="col-md-8">
@@ -105,7 +105,7 @@
             <div class="card col-9 mx-auto">
                 <div class="row g-0">
                     <div class="col-md-2">
-                        <img src="https://zeevector.com/wp-content/uploads/Intel-Logo-Transparent-PNG-Vector.png"
+                        <img src="../assets/images/product/thumbnail.jpg"
                             class="img-fluid rounded-start cart-icon" alt="CPU icon">
                     </div>
                     <div class="col-md-8">
@@ -131,7 +131,7 @@
             <div class="card col-9 mx-auto">
                 <div class="row g-0">
                     <div class="col-md-2">
-                        <img src="https://zeevector.com/wp-content/uploads/Intel-Logo-Transparent-PNG-Vector.png"
+                        <img src="../assets/images/product/thumbnail.jpg"
                             class="img-fluid rounded-start cart-icon" alt="CPU icon">
                     </div>
                     <div class="col-md-8">
@@ -157,7 +157,7 @@
             <div class="card col-9 mx-auto mb-3">
                 <div class="row g-0">
                     <div class="col-md-2">
-                        <img src="https://zeevector.com/wp-content/uploads/Intel-Logo-Transparent-PNG-Vector.png"
+                        <img src="../assets/images/product/thumbnail.jpg"
                             class="img-fluid rounded-start cart-icon" alt="CPU icon">
                     </div>
                     <div class="col-md-8">
@@ -192,6 +192,70 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
     <script src="../assets/js/script.js"></script>
+    <script>
+        let spec = {
+            cpu: 0,
+            gpu: 0,
+            ram: 0,
+            storage: 0,
+            case: 0
+        }
+
+        const platform = document.getElementById('platform')
+        const platformImg = document.getElementById('platform-img')
+        
+        const cpu1 = document.getElementById('cpu1')
+        const cpu2 = document.getElementById('cpu2')
+        const cpu3 = document.getElementById('cpu3')
+        const cpu4 = document.getElementById('cpu4')
+        const cpu5 = document.getElementById('cpu5')
+        const cpu6 = document.getElementById('cpu6')
+        const cpu = document.getElementById('cpu')
+        const cpuImg = document.getElementById('cpu-img')
+
+        cpu.addEventListener('change', e => {
+            switch (e.target.value) {
+                case '1':
+                    cpuImg.setAttribute('src', '../assets/images/product/cpu-1.svg')
+                    break;
+                case '2':
+                    cpuImg.setAttribute('src', '../assets/images/product/cpu-2.png')
+                    break;
+                case '3':
+                    cpuImg.setAttribute('src', '../assets/images/product/cpu-3.svg')
+                    break;
+                case '4':
+                    cpuImg.setAttribute('src', '../assets/images/product/cpu-4.webp')
+                    break;
+                case '5':
+                    cpuImg.setAttribute('src', '../assets/images/product/cpu-5.webp')
+                    break;
+                case '6':
+                    cpuImg.setAttribute('src', '../assets/images/product/cpu-6.webp')
+                    break;
+            }
+        })
+
+        platform.addEventListener('change', e => {
+            if (e.target.value == '1') {
+                cpu1.removeAttribute('hidden')
+                cpu2.removeAttribute('hidden')
+                cpu3.removeAttribute('hidden')
+                cpu4.setAttribute('hidden', '')
+                cpu5.setAttribute('hidden', '')
+                cpu6.setAttribute('hidden', '')
+                platformImg.setAttribute('src', 'https://zeevector.com/wp-content/uploads/Intel-Logo-Transparent-PNG-Vector.png')
+            } else if (e.target.value == '2') {
+                cpu1.setAttribute('hidden', '')
+                cpu2.setAttribute('hidden', '')
+                cpu3.setAttribute('hidden', '')
+                cpu4.removeAttribute('hidden')
+                cpu5.removeAttribute('hidden')
+                cpu6.removeAttribute('hidden')
+                platformImg.setAttribute('src', 'https://seeklogo.com/images/A/AMD-logo-B5E0D58D48-seeklogo.com.png')
+            }
+        })
+    </script>
 </body>
 
 </html>

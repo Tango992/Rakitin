@@ -46,7 +46,7 @@
                         <label for="repassword">Re-enter password</label>
                     </div>
 
-                    <button class="btn btn-primary w-100 py-2" type="submit">Sign up</button>
+                    <button id="signup-btn" class="disabled btn btn-primary w-100 py-2" type="submit">Sign up</button>
 
                 </form>
             </div>
@@ -62,6 +62,27 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
     <script src="../assets/js/script.js"></script>
+    <script>
+        const password = document.getElementById('password')
+        const repassword = document.getElementById('repassword')
+        const signupBtn = document.getElementById('signup-btn')
+
+        password.addEventListener('keyup', e => {
+            allowSubmit()
+        })
+
+        repassword.addEventListener('keyup', e => {
+            allowSubmit()
+        })
+
+        const allowSubmit = str => {
+            if (password.value === repassword.value) {
+                signupBtn.setAttribute('class', 'btn btn-primary w-100 py-2')
+            } else {
+                signupBtn.setAttribute('class', 'disabled btn btn-primary w-100 py-2')
+            }
+        }
+    </script>
 </body>
 
 </html>

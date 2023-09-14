@@ -281,7 +281,7 @@
         let currentDiscount = 0
         let sub = 0
 
-
+        
         cpu.addEventListener('change', e => {
             let i = parseInt(e.target.value) - 1
             cpuImg.setAttribute('src', cpus[i].img)
@@ -335,9 +335,15 @@
             })
         })
 
+        let str = ""
         voucherInput.addEventListener('keyup', e => {
+            str = voucherInput.value
+            updateVoucher(str)
+        })
+
+        const updateVoucher = str => {
             for (const disc of discs) {
-                if (voucherInput.value === disc.name) {
+                if (str === disc.name) {
                     currentDiscount = disc.cut;
                     cut.innerHTML = `${Math.floor(currentDiscount * 100)} %`
                     total.innerHTML = `Rp. ${(sub - (sub * currentDiscount)).toLocaleString('en-US')}`
@@ -347,7 +353,12 @@
                     cut.innerHTML = ""
                 }
             }
-        })
+        }
+
+        if (sessionStorage.getItem('voucher')) {
+            voucherInput.value = sessionStorage.getItem('voucher')
+            updateVoucher(sessionStorage.getItem('voucher'))
+        }
 
         platform.addEventListener('change', e => {
             if (e.target.value == '1') {

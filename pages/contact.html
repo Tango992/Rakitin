@@ -38,31 +38,31 @@
                             keluhan, kritik, saran, dan lain-lain.</p>
                     </div>
                     <div class="mx-auto col-lg-6">
-                        <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+                        <form method="get" class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
                             <div class="row">
                                 <div class="col-6 pe-1">
                                     <div class="form-floating mb-3">
-                                        <input required type="text" class="form-control" id="first" placeholder="John">
+                                        <input required type="text" class="form-control" name="first" id="first" placeholder="John">
                                         <label for="first">First name</label>
                                     </div>
                                 </div>
                                 <div class="col-6 ps-1">
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="last" placeholder="Doe">
+                                        <input type="text" class="form-control" name="last" id="last" placeholder="Doe">
                                         <label for="last">Last name</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-floating mb-3">
-                                <input required type="email" class="form-control" id="email" placeholder="name@example.com">
+                                <input required type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
                                 <label for="email">Email address</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input required type="number" class="form-control" id="phone" placeholder="Phone">
+                                <input required type="number" class="form-control" name="phone" id="phone" placeholder="Phone">
                                 <label for="phone">Phone</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <select required class="form-select" id="subject" aria-label="Floating label select example">
+                                <select required class="form-select" name="subject" id="subject" aria-label="Floating label select example">
                                     <option value="1">Pertanyaan</option>
                                     <option value="2">Kritik</option>
                                     <option value="3">Saran</option>
@@ -72,7 +72,7 @@
                                 <label for="subject">Subject</label>
                               </div>
                             <div class="form-floating mb-3">
-                                <textarea required class="form-control" placeholder="Message" id="message"
+                                <textarea required class="form-control" placeholder="Message" name="message" id="message"
                                     style="height: 120px"></textarea>
                                 <label for="message">Message</label>
                             </div>

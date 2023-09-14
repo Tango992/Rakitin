@@ -30,7 +30,7 @@
 
         <main class="px-3 my-5">
             <h1 class="mb-5">Konfigurasi PC Kamu</h1>
-            <form action="#" name="customisation" id="customisation">
+            <form action="#" method="get" name="customisation" id="customisation">
                 <div class="card col-9 mx-auto product-card">
                     <div class="row g-0">
                         <div class="col-md-2">
@@ -41,7 +41,7 @@
                             <div class="card-body text-start">
                                 <h5 class="card-title">Platform</h5>
                                 <div class="col-md-6 mb-3">
-                                    <select name="test" id="platform" class="form-control">
+                                    <select required id="platform" class="form-control">
                                         <option selected disabled>Select platform</option>
                                         <option value="1">Intel</option>
                                         <option value="2">AMD</option>
@@ -61,7 +61,7 @@
                             <div class="card-body text-start">
                                 <h5 class="card-title">CPU</h5>
                                 <div class="col-md-6 mb-3">
-                                    <select id="cpu" class="form-control">
+                                    <select required name="cpu" id="cpu" class="form-control">
                                         <option selected id="0" disabled>Select CPU</option>
                                         <option hidden id="cpu1" value="1">Core i5</option>
                                         <option hidden id="cpu2" value="2">Core i7</option>
@@ -89,7 +89,7 @@
                             <div class="card-body text-start">
                                 <h5 class="card-title">GPU</h5>
                                 <div class="col-md-6 mb-3">
-                                    <select id="gpu" class="form-control select2">
+                                    <select required name="gpu" id="gpu" class="form-control select2">
                                         <option selected disabled>Select GPU</option>
                                         <option value="1">RTX 4060</option>
                                         <option value="2">RTX 4070</option>
@@ -114,7 +114,7 @@
                             <div class="card-body text-start">
                                 <h5 class="card-title">RAM</h5>
                                 <div class="col-md-6 mb-3">
-                                    <select id="ram" class="form-control select2">
+                                    <select required name="ram" id="ram" class="form-control select2">
                                         <option selected disabled>Select RAM</option>
                                         <option value="1">16 GB</option>
                                         <option value="2">32 GB</option>
@@ -139,7 +139,7 @@
                             <div class="card-body text-start">
                                 <h5 class="card-title">Storage</h5>
                                 <div class="col-md-6 mb-3">
-                                    <select id="ssd" class="form-control">
+                                    <select required name="ssd" id="ssd" class="form-control">
                                         <option selected disabled>Select Storage</option>
                                         <option value="1">512GB</option>
                                         <option value="2">1TB</option>
@@ -164,7 +164,7 @@
                             <div class="card-body text-start">
                                 <h5 class="card-title">Case</h5>
                                 <div class="col-md-6 mb-3">
-                                    <select id="case" class="form-control select2">
+                                    <select required name="case" id="case" class="form-control select2">
                                         <option selected disabled>Select Case</option>
                                         <option value="1">Cooler Master</option>
                                         <option value="2">Lian Li</option>
@@ -172,10 +172,11 @@
                                         <option value="4">Hyte</option>
                                         <option value="5">Fractal Design</option>
                                         <option value="6">Jonsbo</option>
-                                    </select>
+                                    </select>                                    
                                 </div>
                                 <p id="case-desc"></p>
                             </div>
+                            
                         </div>
                         <div class="col-md-2 d-flex align-items-center justify-content-center">
                             <p id="case-price" class="fw-bold"></p>
@@ -198,7 +199,7 @@
                         <div class="col-md-2 d-flex flex-column justify-content-center">
                             <form>
                                 <div class="form mb-3 pe-3">
-                                    <input type="text" class="form-control" id="voucher-input">
+                                    <input name="voucher" type="text" class="form-control" id="voucher-input">
                                 </div>
                             </form>
                         </div>
@@ -219,10 +220,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div hidden id="checkout-card" class="col-9 mx-auto pt-4">
-                    <div class="col-md-12 d-flex justify-content-end pe-3 mb-5">
-                        <button id="checkout-button" data-bs-toggle="modal" data-bs-target="#modal" class="btn btn-lg btn-info">Checkout</button>
+                    <div class="col-md-12 d-flex justify-content-end pe-5 mt-3 mb-5">
+                        <button hidden id="checkout-button" type="submit" class="btn btn-lg btn-info">Checkout</button>
                     </div>
                 </div>
             </form>
@@ -293,7 +292,6 @@
         const casePrice = document.getElementById('case-price')
         const caseImg = document.getElementById('case-img')
 
-        const checkoutCard = document.getElementById('checkout-card')
         const checkoutBtn = document.getElementById('checkout-button')
         const subtotal = document.getElementById('subtotal')
         const cut = document.getElementById('discount')
@@ -350,7 +348,7 @@
                 total.innerHTML = `Rp. ${(sub - (sub * currentDiscount)).toLocaleString('en-US')}`
 
                 if (spec.cpu && spec.gpu && spec.ram && spec.storage && spec.case) {
-                    checkoutCard.removeAttribute('hidden')
+                    checkoutBtn.removeAttribute('hidden')
                 }
             })
         })

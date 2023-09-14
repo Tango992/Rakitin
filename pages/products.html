@@ -60,7 +60,7 @@
                             <h5 class="card-title">CPU</h5>
                             <form class="col-md-6 mb-3">
                                 <select id="cpu" class="form-control">
-                                    <option selected disabled>Select CPU</option>
+                                    <option selected id="0" disabled>Select CPU</option>
                                     <option hidden id="cpu1" value="1">Intel Core i5</option>
                                     <option hidden id="cpu2" value="2">Intel Core i7</option>
                                     <option hidden id="cpu3" value="3">Intel Core i9</option>
@@ -69,114 +69,114 @@
                                     <option hidden id="cpu6" value="6">AMD Ryzen 9</option>
                                 </select>
                             </form>
-                            <p>Lorem Ipsum</p>
+                            <p id="cpu-desc"></p>
                         </div>
                     </div>
                     <div class="col-md-2 d-flex align-items-center justify-content-center">
-                        <p class="fw-bold">Rp. 100.000.000</p>
+                        <p class="fw-bold text-end" id="cpu-price"></p>
                     </div>
                 </div>
             </div>
             <div class="card col-9 mx-auto">
                 <div class="row g-0">
                     <div class="col-md-2">
-                        <img src="../assets/images/product/thumbnail.jpg"
+                        <img id="gpu-img" src="../assets/images/product/thumbnail.jpg"
                             class="img-fluid rounded-start cart-icon" alt="CPU icon">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body text-start">
                             <h5 class="card-title">GPU</h5>
                             <form class="col-md-6 mb-3">
-                                <select class="form-control select2">
+                                <select id="gpu" class="form-control select2">
                                     <option selected disabled>Select GPU</option>
-                                    <option value="1">RTX 3060</option>
-                                    <option value="2">RTX 3070</option>
-                                    <option value="3">RTX 3080</option>
+                                    <option value="1">RTX 4060</option>
+                                    <option value="2">RTX 4070</option>
+                                    <option value="3">RTX 4080</option>
                                 </select>
                             </form>
-                            <p>Lorem Ipsum</p>
+                            <p id="gpu-desc"></p>
                         </div>
                     </div>
                     <div class="col-md-2 d-flex align-items-center justify-content-center">
-                        <p class="fw-bold">Rp. 100.000.000</p>
+                        <p id="gpu-price" class="fw-bold"></p>
                     </div>
                 </div>
             </div>
             <div class="card col-9 mx-auto">
                 <div class="row g-0">
                     <div class="col-md-2">
-                        <img src="../assets/images/product/thumbnail.jpg"
+                        <img id="ram-img" src="../assets/images/product/thumbnail.jpg"
                             class="img-fluid rounded-start cart-icon" alt="CPU icon">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body text-start">
                             <h5 class="card-title">RAM</h5>
                             <form class="col-md-6 mb-3">
-                                <select class="form-control select2">
+                                <select id="ram" class="form-control select2">
                                     <option selected disabled>Select RAM</option>
-                                    <option value="1">8GB</option>
-                                    <option value="1">16GB</option>
-                                    <option value="1">32GB</option>
-                                    <option value="1">64GB</option>
+                                    <option value="1">16 GB</option>
+                                    <option value="2">32 GB</option>
+                                    <option value="3">64 GB</option>
                                 </select>
                             </form>
-                            <p>Lorem Ipsum</p>
+                            <p id="ram-desc"></p>
                         </div>
                     </div>
                     <div class="col-md-2 d-flex align-items-center justify-content-center">
-                        <p class="fw-bold">Rp. 100.000.000</p>
+                        <p class="fw-bold" id="ram-price"></p>
                     </div>
                 </div>
             </div>
             <div class="card col-9 mx-auto">
                 <div class="row g-0">
                     <div class="col-md-2">
-                        <img src="../assets/images/product/thumbnail.jpg"
+                        <img id="ssd-img" src="../assets/images/product/thumbnail.jpg"
                             class="img-fluid rounded-start cart-icon" alt="CPU icon">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body text-start">
                             <h5 class="card-title">Storage</h5>
-                            <form class="col-md-6 mb-3">
+                            <form id="ssd" class="col-md-6 mb-3">
                                 <select class="form-control">
                                     <option selected disabled>Select Storage</option>
                                     <option value="1">512GB</option>
                                     <option value="2">1TB</option>
                                     <option value="3">2TB</option>
-                                    <option value="4">4TB</option>
                                 </select>
                             </form>
-                            <p>Lorem Ipsum</p>
+                            <p id="ssd-desc"></p>
                         </div>
                     </div>
                     <div class="col-md-2 d-flex align-items-center justify-content-center">
-                        <p class="fw-bold">Rp. 100.000.000</p>
+                        <p id="ssd-price"class="fw-bold"></p>
                     </div>
                 </div>
             </div>
             <div class="card col-9 mx-auto mb-3">
                 <div class="row g-0">
                     <div class="col-md-2">
-                        <img src="../assets/images/product/thumbnail.jpg"
+                        <img id="case-img" src="../assets/images/product/thumbnail.jpg"
                             class="img-fluid rounded-start cart-icon" alt="CPU icon">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body text-start">
                             <h5 class="card-title">Case</h5>
                             <form class="col-md-6 mb-3">
-                                <select class="form-control select2">
+                                <select id="case" class="form-control select2">
                                     <option selected disabled>Select Case</option>
-                                    <option value="1">Cube Gaming</option>
-                                    <option value="2">Fractal</option>
-                                    <option value="3">Cooler Master</option>
-                                    <option value="4">Corsair</option>
+                                    <option value="1">Cooler Master</option>
+                                    <option value="2">Lian Li</option>
+                                    <option value="3">DLM</option>
+                                    <option value="4">Hyte</option>
+                                    <option value="5">Fractal Design</option>
+                                    <option value="6">Jonsbo</option>
                                 </select>
                             </form>
-                            <p>Lorem Ipsum</p>
+                            <p id="case-desc"></p>
                         </div>
                     </div>
                     <div class="col-md-2 d-flex align-items-center justify-content-center">
-                        <p class="fw-bold">Rp. 100.000.000</p>
+                        <p id="case-price" class="fw-bold"></p>
                     </div>
                 </div>
             </div>
@@ -193,14 +193,6 @@
         crossorigin="anonymous"></script>
     <script src="../assets/js/script.js"></script>
     <script>
-        let spec = {
-            cpu: 0,
-            gpu: 0,
-            ram: 0,
-            storage: 0,
-            case: 0
-        }
-
         const platform = document.getElementById('platform')
         const platformImg = document.getElementById('platform-img')
         
@@ -211,29 +203,73 @@
         const cpu5 = document.getElementById('cpu5')
         const cpu6 = document.getElementById('cpu6')
         const cpu = document.getElementById('cpu')
+        const cpuDesc = document.getElementById('cpu-desc')
+        const cpuPrice = document.getElementById('cpu-price')
         const cpuImg = document.getElementById('cpu-img')
 
+        const gpu = document.getElementById('gpu')
+        const gpuDesc = document.getElementById('gpu-desc')
+        const gpuPrice = document.getElementById('gpu-price')
+        const gpuImg = document.getElementById('gpu-img')
+        
+        const ram = document.getElementById('ram')
+        const ramDesc = document.getElementById('ram-desc')
+        const ramPrice = document.getElementById('ram-price')
+        const ramImg = document.getElementById('ram-img')
+
+        const ssd = document.getElementById('ssd')
+        const ssdDesc = document.getElementById('ssd-desc')
+        const ssdPrice = document.getElementById('ssd-price')
+        const ssdImg = document.getElementById('ssd-img')
+
+        const cased = document.getElementById('case')
+        const caseDesc = document.getElementById('case-desc')
+        const casePrice = document.getElementById('case-price')
+        const caseImg = document.getElementById('case-img')
+
         cpu.addEventListener('change', e => {
-            switch (e.target.value) {
-                case '1':
-                    cpuImg.setAttribute('src', '../assets/images/product/cpu-1.svg')
-                    break;
-                case '2':
-                    cpuImg.setAttribute('src', '../assets/images/product/cpu-2.png')
-                    break;
-                case '3':
-                    cpuImg.setAttribute('src', '../assets/images/product/cpu-3.svg')
-                    break;
-                case '4':
-                    cpuImg.setAttribute('src', '../assets/images/product/cpu-4.webp')
-                    break;
-                case '5':
-                    cpuImg.setAttribute('src', '../assets/images/product/cpu-5.webp')
-                    break;
-                case '6':
-                    cpuImg.setAttribute('src', '../assets/images/product/cpu-6.webp')
-                    break;
-            }
+            let i = parseInt(e.target.value) - 1
+            cpuImg.setAttribute('src', cpus[i].img)
+            cpuDesc.innerHTML = cpus[i].desc
+            cpuPrice.innerHTML = `Rp. ${cpus[i].price.toLocaleString('en-US')}`
+            spec.cpu = cpus[i].price
+            console.log(spec)
+        })
+
+        gpu.addEventListener('change', e => {
+            let i = parseInt(e.target.value) - 1
+            gpuImg.setAttribute('src', gpus[i].img)
+            gpuDesc.innerHTML = gpus[i].desc
+            gpuPrice.innerHTML = `Rp. ${gpus[i].price.toLocaleString('en-US')}`
+            spec.gpu = gpus[i].price
+            console.log(spec)
+        })
+
+        ram.addEventListener('change', e => {
+            let i = parseInt(e.target.value) - 1
+            ramImg.setAttribute('src', rams[i].img)
+            ramDesc.innerHTML = rams[i].desc
+            ramPrice.innerHTML = `Rp. ${rams[i].price.toLocaleString('en-US')}`
+            spec.ram = rams[i].price
+            console.log(spec)
+        })
+
+        ssd.addEventListener('change', e => {
+            let i = parseInt(e.target.value) - 1
+            ssdImg.setAttribute('src', ssds[i].img)
+            ssdDesc.innerHTML = ssds[i].desc
+            ssdPrice.innerHTML = `Rp. ${ssds[i].price.toLocaleString('en-US')}`
+            spec.storage = ssds[i].price
+            console.log(spec)
+        })
+
+        cased.addEventListener('change', e => {
+            let i = parseInt(e.target.value) - 1
+            caseImg.setAttribute('src', cases[i].img)
+            caseDesc.innerHTML = cases[i].desc
+            casePrice.innerHTML = `Rp. ${cases[i].price.toLocaleString('en-US')}`
+            spec.case = cases[i].price
+            console.log(spec)
         })
 
         platform.addEventListener('change', e => {

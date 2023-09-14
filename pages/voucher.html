@@ -18,7 +18,7 @@
                 <h3 class="float-md-start mb-0">Rakitin</h3>
                 <nav class="nav nav-masthead justify-content-center float-md-end">
                     <a class="nav-link fw-bold py-1 px-0" href="../index.html">Home</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="#">Products</a>
+                    <a class="nav-link fw-bold py-1 px-0" href="products.html">Products</a>
                     <a class="nav-link fw-bold py-1 px-0" href="gallery.html">Gallery</a>
                     <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Voucher</a>
                     <a class="nav-link fw-bold py-1 px-0" href="contact.html">Contact Us</a>
@@ -48,6 +48,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script src="../assets/js/script.js"></script>
     <script>
         const voucher = document.getElementById('voucher')
@@ -61,16 +62,12 @@
         })
 
         generate.addEventListener('click', e => {
-            if (sessionStorage.getItem('voucher')) {
-                generate.setAttribute('hidden','')
-                voucher.innerHTML = sessionStorage.getItem('voucher')
-            } else {
-                let i = Math.floor(Math.random() * 4)
-                let disc = discs[i].name
-                voucher.innerHTML = disc
-                generate.setAttribute('hidden','')
-                sessionStorage.setItem('voucher', disc)
-            }
+            let i = Math.floor(Math.random() * 4)
+            let disc = discs[i].name
+            confetti()
+            voucher.innerHTML = disc
+            generate.setAttribute('hidden','')
+            sessionStorage.setItem('voucher', disc)
         })
     </script>
 </body>

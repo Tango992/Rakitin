@@ -26,6 +26,14 @@
   box-shadow: inset 0px 0px 3px 3px #5a23c8bc;
 }
 
+.voucher-card {
+  background-color: #5a23c8;
+  transition: top 0.3s, background-color 0.3s;
+}
+.voucher-card:hover {
+  transition: background-color 0.3s;
+}
+
 .cart-icon {
   aspect-ratio: 1/1;
   object-fit: cover;

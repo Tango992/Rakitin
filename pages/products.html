@@ -20,6 +20,7 @@
                     <a class="nav-link fw-bold py-1 px-0" href="../index.html">Home</a>
                     <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Products</a>
                     <a class="nav-link fw-bold py-1 px-0" href="gallery.html">Gallery</a>
+                    <a class="nav-link fw-bold py-1 px-0" href="voucher.html">Voucher</a>
                     <a class="nav-link fw-bold py-1 px-0" href="contact.html">Contact Us</a>
                     <a class="nav-link fw-bold py-1 px-0" href="about.html"">About Us</a>
                     <a class=" nav-link fw-bold py-1 px-0" href="login.html">Login/Register</a>
@@ -183,7 +184,7 @@
             <div class="card col-9 mx-auto pt-3 product-card">
                 <div class="row g-0">
                     <div class="col-md-10 text-end pe-5">
-                        <p>Subtotal: </p>
+                        <p>Sub total: </p>
                     </div>
                     <div class="col-md-2 d-flex flex-column justify-content-center">
                         <p id="subtotal" class="fw-bold"></p>
@@ -210,7 +211,7 @@
                     </div>
                     <div class="row g-0">
                         <div class="col-md-10 text-end pe-5">
-                            <p>Total: </p>
+                            <p>Grand total: </p>
                         </div>
                         <div class="col-md-2 d-flex flex-column justify-content-center">
                             <p id="total" class="fw-bold"></p>
@@ -340,7 +341,7 @@
                     currentDiscount = disc.cut;
                     cut.innerHTML = `${Math.floor(currentDiscount * 100)} %`
                     total.innerHTML = `Rp. ${(sub - (sub * currentDiscount)).toLocaleString('en-US')}`
-                    return true
+                    break
                 } else {
                     currentDiscount = 0
                     cut.innerHTML = ""

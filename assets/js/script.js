@@ -139,6 +139,25 @@ const cases = [
     }
 ]
 
+const discs = [
+    {
+        name: 'RAKITSKRG',
+        cut: 0.05
+    },
+    {
+        name: 'SKRGRAKIT',
+        cut: 0.07
+    },
+    {
+        name: 'MNDINGRAKIT',
+        cut: 0.10
+    },
+    {
+        name: 'DOMPETIPIS',
+        cut: 0.13
+    },
+]
+
 let spec = {
     cpu: 0,
     gpu: 0,

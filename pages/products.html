@@ -29,10 +29,10 @@
 
         <main class="px-3 my-5">
             <h1 class="mb-5">Konfigurasi PC Kamu</h1>
-            <div class="card col-9 mx-auto">
+            <div class="card col-9 mx-auto product-card">
                 <div class="row g-0">
                     <div class="col-md-2">
-                        <img id="platform-img" src="../assets/images/product/thumbnail.jpg"
+                        <img id="platform-img" src="../assets/images/product/thumbnail.png"
                             class="img-fluid rounded-start cart-icon" alt="CPU icon">
                     </div>
                     <div class="col-md-8">
@@ -49,10 +49,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card col-9 mx-auto">
+            <div class="card col-9 mx-auto product-card">
                 <div class="row g-0">
                     <div class="col-md-2">
-                        <img id="cpu-img" src="../assets/images/product/thumbnail.jpg"
+                        <img id="cpu-img" src="../assets/images/product/thumbnail.png"
                             class="img-fluid rounded-start cart-icon" alt="CPU icon">
                     </div>
                     <div class="col-md-8">
@@ -61,12 +61,12 @@
                             <form class="col-md-6 mb-3">
                                 <select id="cpu" class="form-control">
                                     <option selected id="0" disabled>Select CPU</option>
-                                    <option hidden id="cpu1" value="1">Intel Core i5</option>
-                                    <option hidden id="cpu2" value="2">Intel Core i7</option>
-                                    <option hidden id="cpu3" value="3">Intel Core i9</option>
-                                    <option hidden id="cpu4" value="4">AMD Ryzen 5</option>
-                                    <option hidden id="cpu5" value="5">AMD Ryzen 7</option>
-                                    <option hidden id="cpu6" value="6">AMD Ryzen 9</option>
+                                    <option hidden id="cpu1" value="1">Core i5</option>
+                                    <option hidden id="cpu2" value="2">Core i7</option>
+                                    <option hidden id="cpu3" value="3">Core i9</option>
+                                    <option hidden id="cpu4" value="4">Ryzen 5</option>
+                                    <option hidden id="cpu5" value="5">Ryzen 7</option>
+                                    <option hidden id="cpu6" value="6">Ryzen 9</option>
                                 </select>
                             </form>
                             <p id="cpu-desc"></p>
@@ -77,10 +77,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card col-9 mx-auto">
+            <div class="card col-9 mx-auto product-card">
                 <div class="row g-0">
                     <div class="col-md-2">
-                        <img id="gpu-img" src="../assets/images/product/thumbnail.jpg"
+                        <img id="gpu-img" src="../assets/images/product/thumbnail.png"
                             class="img-fluid rounded-start cart-icon" alt="CPU icon">
                     </div>
                     <div class="col-md-8">
@@ -102,10 +102,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card col-9 mx-auto">
+            <div class="card col-9 mx-auto product-card">
                 <div class="row g-0">
                     <div class="col-md-2">
-                        <img id="ram-img" src="../assets/images/product/thumbnail.jpg"
+                        <img id="ram-img" src="../assets/images/product/thumbnail.png"
                             class="img-fluid rounded-start cart-icon" alt="CPU icon">
                     </div>
                     <div class="col-md-8">
@@ -127,17 +127,17 @@
                     </div>
                 </div>
             </div>
-            <div class="card col-9 mx-auto">
+            <div class="card col-9 mx-auto product-card">
                 <div class="row g-0">
                     <div class="col-md-2">
-                        <img id="ssd-img" src="../assets/images/product/thumbnail.jpg"
+                        <img id="ssd-img" src="../assets/images/product/thumbnail.png"
                             class="img-fluid rounded-start cart-icon" alt="CPU icon">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body text-start">
                             <h5 class="card-title">Storage</h5>
-                            <form id="ssd" class="col-md-6 mb-3">
-                                <select class="form-control">
+                            <form class="col-md-6 mb-3">
+                                <select id="ssd" class="form-control">
                                     <option selected disabled>Select Storage</option>
                                     <option value="1">512GB</option>
                                     <option value="2">1TB</option>
@@ -152,10 +152,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card col-9 mx-auto mb-3">
+            <div class="card col-9 mx-auto product-card">
                 <div class="row g-0">
                     <div class="col-md-2">
-                        <img id="case-img" src="../assets/images/product/thumbnail.jpg"
+                        <img id="case-img" src="../assets/images/product/thumbnail.png"
                             class="img-fluid rounded-start cart-icon" alt="CPU icon">
                     </div>
                     <div class="col-md-8">
@@ -180,6 +180,49 @@
                     </div>
                 </div>
             </div>
+            <div class="card col-9 mx-auto pt-3 product-card">
+                <div class="row g-0">
+                    <div class="col-md-10 text-end pe-5">
+                        <p>Subtotal: </p>
+                    </div>
+                    <div class="col-md-2 d-flex flex-column justify-content-center">
+                        <p id="subtotal" class="fw-bold"></p>
+                    </div>
+                </div>
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-10 text-end pe-5">
+                        <p>Voucher: </p>
+                    </div>
+                    <div class="col-md-2 d-flex flex-column justify-content-center">
+                        <form>
+                            <div class="form mb-3 pe-3">
+                                <input type="text" class="form-control" id="voucher-input">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row g-0">
+                        <div class="col-md-10 text-end pe-5">
+                            <p>Discount: </p>
+                        </div>
+                        <div class="col-md-2 d-flex flex-column justify-content-center">
+                            <p id="discount" class="fw-bold"></p>
+                        </div>
+                    </div>
+                    <div class="row g-0">
+                        <div class="col-md-10 text-end pe-5">
+                            <p>Total: </p>
+                        </div>
+                        <div class="col-md-2 d-flex flex-column justify-content-center">
+                            <p id="total" class="fw-bold"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div hidden id="checkout-card" class="col-9 mx-auto pt-4">
+                <div class="col-md-12 d-flex justify-content-end pe-3">
+                    <button class="btn btn-lg btn-info">Checkout</button>
+                </div>
+            </div>
         </main>
 
         <footer class="mt-auto text-white-50">
@@ -193,6 +236,8 @@
         crossorigin="anonymous"></script>
     <script src="../assets/js/script.js"></script>
     <script>
+        const forms = document.querySelectorAll('.form-control')
+
         const platform = document.getElementById('platform')
         const platformImg = document.getElementById('platform-img')
         
@@ -227,13 +272,21 @@
         const casePrice = document.getElementById('case-price')
         const caseImg = document.getElementById('case-img')
 
+        const checkoutCard = document.getElementById('checkout-card')
+        const subtotal = document.getElementById('subtotal')
+        const cut = document.getElementById('discount')
+        const total = document.getElementById('total')
+        const voucherInput = document.getElementById('voucher-input')
+        let currentDiscount = 0
+        let sub = 0
+
+
         cpu.addEventListener('change', e => {
             let i = parseInt(e.target.value) - 1
             cpuImg.setAttribute('src', cpus[i].img)
             cpuDesc.innerHTML = cpus[i].desc
             cpuPrice.innerHTML = `Rp. ${cpus[i].price.toLocaleString('en-US')}`
             spec.cpu = cpus[i].price
-            console.log(spec)
         })
 
         gpu.addEventListener('change', e => {
@@ -242,7 +295,6 @@
             gpuDesc.innerHTML = gpus[i].desc
             gpuPrice.innerHTML = `Rp. ${gpus[i].price.toLocaleString('en-US')}`
             spec.gpu = gpus[i].price
-            console.log(spec)
         })
 
         ram.addEventListener('change', e => {
@@ -251,7 +303,6 @@
             ramDesc.innerHTML = rams[i].desc
             ramPrice.innerHTML = `Rp. ${rams[i].price.toLocaleString('en-US')}`
             spec.ram = rams[i].price
-            console.log(spec)
         })
 
         ssd.addEventListener('change', e => {
@@ -260,7 +311,6 @@
             ssdDesc.innerHTML = ssds[i].desc
             ssdPrice.innerHTML = `Rp. ${ssds[i].price.toLocaleString('en-US')}`
             spec.storage = ssds[i].price
-            console.log(spec)
         })
 
         cased.addEventListener('change', e => {
@@ -269,7 +319,33 @@
             caseDesc.innerHTML = cases[i].desc
             casePrice.innerHTML = `Rp. ${cases[i].price.toLocaleString('en-US')}`
             spec.case = cases[i].price
-            console.log(spec)
+        })
+
+        forms.forEach(form => {
+            form.addEventListener('change', e => {
+                sub = spec.cpu + spec.gpu + spec.ram + spec.storage + spec.case
+                subtotal.innerHTML = `Rp. ${sub.toLocaleString('en-US')}`
+                total.innerHTML = `Rp. ${(sub - (sub * currentDiscount)).toLocaleString('en-US')}`
+
+                if (spec.cpu && spec.gpu && spec.ram && spec.storage && spec.case) {
+                    checkoutCard.removeAttribute('hidden')
+                    console.log(currentDiscount)
+                }
+            })
+        })
+
+        voucherInput.addEventListener('keyup', e => {
+            for (const disc of discs) {
+                if (voucherInput.value === disc.name) {
+                    currentDiscount = disc.cut;
+                    cut.innerHTML = `${Math.floor(currentDiscount * 100)} %`
+                    total.innerHTML = `Rp. ${(sub - (sub * currentDiscount)).toLocaleString('en-US')}`
+                    return true
+                } else {
+                    currentDiscount = 0
+                    cut.innerHTML = ""
+                }
+            }
         })
 
         platform.addEventListener('change', e => {

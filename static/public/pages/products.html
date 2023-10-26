@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Products</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="d-flex h-auto text-center text-bg-dark">
+    <div class="container-sm d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+                <h3 class="float-md-start mb-0">Rakitin</h3>
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+                    <a class="nav-link fw-bold py-1 px-0" href="../index.html">Home</a>
+                    <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Products</a>
+                    <a class="nav-link fw-bold py-1 px-0" href="gallery.html">Gallery</a>
+                    <a class="nav-link fw-bold py-1 px-0" href="voucher.html">Voucher</a>
+                    <a class="nav-link fw-bold py-1 px-0" href="contact.html">Contact Us</a>
+                    <a class="nav-link fw-bold py-1 px-0" href="about.html">About Us</a>
+                    <a class=" nav-link fw-bold py-1 px-0" href="login.html">Login/Register</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="px-3 mt-5-md mt-3 mb-5">
+            <h1 class="mb-5">Konfigurasi PC Kamu</h1>
+            <form action="#" method="get" name="customisation" id="customisation">
+                <div class="card col-9 mx-auto product-card">
+                    <div class="row g-0">
+                        <div class="col-md-2">
+                            <img id="platform-img" src="../assets/images/product/thumbnail.png"
+                                class="img-fluid rounded-start cart-icon" alt="CPU icon">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body text-start">
+                                <h5 class="card-title">Platform</h5>
+                                <div class="col-md-6 mb-3">
+                                    <select required id="platform" class="form-control">
+                                        <option selected disabled>Select platform</option>
+                                        <option value="1">Intel</option>
+                                        <option value="2">AMD</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-9 mx-auto product-card">
+                    <div class="row g-0">
+                        <div class="col-md-2">
+                            <img id="cpu-img" src="../assets/images/product/thumbnail.png"
+                                class="img-fluid rounded-start cart-icon" alt="CPU icon">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body text-start">
+                                <h5 class="card-title">CPU</h5>
+                                <div class="col-md-6 mb-3">
+                                    <select required name="cpu" id="cpu" class="form-control">
+                                        <option selected id="0" disabled>Select CPU</option>
+                                        <option hidden id="cpu1" value="1">Core i5</option>
+                                        <option hidden id="cpu2" value="2">Core i7</option>
+                                        <option hidden id="cpu3" value="3">Core i9</option>
+                                        <option hidden id="cpu4" value="4">Ryzen 5</option>
+                                        <option hidden id="cpu5" value="5">Ryzen 7</option>
+                                        <option hidden id="cpu6" value="6">Ryzen 9</option>
+                                    </select>
+                                </div>
+                                <p id="cpu-desc"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <p class="fw-bold text-end" id="cpu-price"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-9 mx-auto product-card">
+                    <div class="row g-0">
+                        <div class="col-md-2">
+                            <img id="gpu-img" src="../assets/images/product/thumbnail.png"
+                                class="img-fluid rounded-start cart-icon" alt="CPU icon">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body text-start">
+                                <h5 class="card-title">GPU</h5>
+                                <div class="col-md-6 mb-3">
+                                    <select required name="gpu" id="gpu" class="form-control select2">
+                                        <option selected disabled>Select GPU</option>
+                                        <option value="1">RTX 4060</option>
+                                        <option value="2">RTX 4070</option>
+                                        <option value="3">RTX 4080</option>
+                                    </select>
+                                </div>
+                                <p id="gpu-desc"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <p id="gpu-price" class="fw-bold"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-9 mx-auto product-card">
+                    <div class="row g-0">
+                        <div class="col-md-2">
+                            <img id="ram-img" src="../assets/images/product/thumbnail.png"
+                                class="img-fluid rounded-start cart-icon" alt="CPU icon">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body text-start">
+                                <h5 class="card-title">RAM</h5>
+                                <div class="col-md-6 mb-3">
+                                    <select required name="ram" id="ram" class="form-control select2">
+                                        <option selected disabled>Select RAM</option>
+                                        <option value="1">16 GB</option>
+                                        <option value="2">32 GB</option>
+                                        <option value="3">64 GB</option>
+                                    </select>
+                                </div>
+                                <p id="ram-desc"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <p class="fw-bold" id="ram-price"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-9 mx-auto product-card">
+                    <div class="row g-0">
+                        <div class="col-md-2">
+                            <img id="ssd-img" src="../assets/images/product/thumbnail.png"
+                                class="img-fluid rounded-start cart-icon" alt="CPU icon">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body text-start">
+                                <h5 class="card-title">Storage</h5>
+                                <div class="col-md-6 mb-3">
+                                    <select required name="ssd" id="ssd" class="form-control">
+                                        <option selected disabled>Select Storage</option>
+                                        <option value="1">512GB</option>
+                                        <option value="2">1TB</option>
+                                        <option value="3">2TB</option>
+                                    </select>
+                                </div>
+                                <p id="ssd-desc"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <p id="ssd-price" class="fw-bold"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-9 mx-auto product-card">
+                    <div class="row g-0">
+                        <div class="col-md-2">
+                            <img id="case-img" src="../assets/images/product/thumbnail.png"
+                                class="img-fluid rounded-start cart-icon" alt="CPU icon">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body text-start">
+                                <h5 class="card-title">Case</h5>
+                                <div class="col-md-6 mb-3">
+                                    <select required name="case" id="case" class="form-control select2">
+                                        <option selected disabled>Select Case</option>
+                                        <option value="1">Cooler Master</option>
+                                        <option value="2">Lian Li</option>
+                                        <option value="3">DLM</option>
+                                        <option value="4">Hyte</option>
+                                        <option value="5">Fractal Design</option>
+                                        <option value="6">Jonsbo</option>
+                                    </select>                                    
+                                </div>
+                                <p id="case-desc"></p>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <p id="case-price" class="fw-bold"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-9 mx-auto pt-3 product-card">
+                    <div class="row g-0">
+                        <div class="col-md-10 text-end pe-5">
+                            <p>Sub total: </p>
+                        </div>
+                        <div class="col-md-2 d-flex flex-column justify-content-center">
+                            <p id="subtotal" class="fw-bold"></p>
+                        </div>
+                    </div>
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-10 text-end pe-5">
+                            <p>Voucher: </p>
+                        </div>
+                        <div class="col-md-2 d-flex flex-column justify-content-center">
+                            <form>
+                                <div class="form mb-3 pe-3">
+                                    <input name="voucher" type="text" class="form-control" id="voucher-input">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col-md-10 text-end pe-5">
+                                <p>Discount: </p>
+                            </div>
+                            <div class="col-md-2 d-flex flex-column justify-content-center">
+                                <p id="discount" class="fw-bold"></p>
+                            </div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col-md-10 text-end pe-5">
+                                <p>Grand total: </p>
+                            </div>
+                            <div class="col-md-2 d-flex flex-column justify-content-center">
+                                <p id="total" class="fw-bold"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 d-flex justify-content-end pe-5 mt-3 mb-5">
+                        <button hidden id="checkout-button" type="submit" class="btn btn-lg btn-info">Checkout</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Status</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Transaksi berhasil! <br>
+                            Tim Rakitin akan menghubungimu melalui email.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="mt-5 text-white-50">
+            <p>
+                © 2023 Daniel Osvaldo Rahmanto
+            </p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        const forms = document.querySelectorAll('.form-control')
+
+        const platform = document.getElementById('platform')
+        const platformImg = document.getElementById('platform-img')
+
+        const cpu1 = document.getElementById('cpu1')
+        const cpu2 = document.getElementById('cpu2')
+        const cpu3 = document.getElementById('cpu3')
+        const cpu4 = document.getElementById('cpu4')
+        const cpu5 = document.getElementById('cpu5')
+        const cpu6 = document.getElementById('cpu6')
+        const cpu = document.getElementById('cpu')
+        const cpuDesc = document.getElementById('cpu-desc')
+        const cpuPrice = document.getElementById('cpu-price')
+        const cpuImg = document.getElementById('cpu-img')
+
+        const gpu = document.getElementById('gpu')
+        const gpuDesc = document.getElementById('gpu-desc')
+        const gpuPrice = document.getElementById('gpu-price')
+        const gpuImg = document.getElementById('gpu-img')
+
+        const ram = document.getElementById('ram')
+        const ramDesc = document.getElementById('ram-desc')
+        const ramPrice = document.getElementById('ram-price')
+        const ramImg = document.getElementById('ram-img')
+
+        const ssd = document.getElementById('ssd')
+        const ssdDesc = document.getElementById('ssd-desc')
+        const ssdPrice = document.getElementById('ssd-price')
+        const ssdImg = document.getElementById('ssd-img')
+
+        const cased = document.getElementById('case')
+        const caseDesc = document.getElementById('case-desc')
+        const casePrice = document.getElementById('case-price')
+        const caseImg = document.getElementById('case-img')
+
+        const checkoutBtn = document.getElementById('checkout-button')
+        const subtotal = document.getElementById('subtotal')
+        const cut = document.getElementById('discount')
+        const total = document.getElementById('total')
+        const voucherInput = document.getElementById('voucher-input')
+        let currentDiscount = 0
+        let sub = 0
+
+
+        cpu.addEventListener('change', e => {
+            let i = parseInt(e.target.value) - 1
+            cpuImg.setAttribute('src', cpus[i].img)
+            cpuDesc.innerHTML = cpus[i].desc
+            cpuPrice.innerHTML = `Rp. ${cpus[i].price.toLocaleString('en-US')}`
+            spec.cpu = cpus[i].price
+        })
+
+        gpu.addEventListener('change', e => {
+            let i = parseInt(e.target.value) - 1
+            gpuImg.setAttribute('src', gpus[i].img)
+            gpuDesc.innerHTML = gpus[i].desc
+            gpuPrice.innerHTML = `Rp. ${gpus[i].price.toLocaleString('en-US')}`
+            spec.gpu = gpus[i].price
+        })
+
+        ram.addEventListener('change', e => {
+            let i = parseInt(e.target.value) - 1
+            ramImg.setAttribute('src', rams[i].img)
+            ramDesc.innerHTML = rams[i].desc
+            ramPrice.innerHTML = `Rp. ${rams[i].price.toLocaleString('en-US')}`
+            spec.ram = rams[i].price
+        })
+
+        ssd.addEventListener('change', e => {
+            let i = parseInt(e.target.value) - 1
+            ssdImg.setAttribute('src', ssds[i].img)
+            ssdDesc.innerHTML = ssds[i].desc
+            ssdPrice.innerHTML = `Rp. ${ssds[i].price.toLocaleString('en-US')}`
+            spec.storage = ssds[i].price
+        })
+
+        cased.addEventListener('change', e => {
+            let i = parseInt(e.target.value) - 1
+            caseImg.setAttribute('src', cases[i].img)
+            caseDesc.innerHTML = cases[i].desc
+            casePrice.innerHTML = `Rp. ${cases[i].price.toLocaleString('en-US')}`
+            spec.case = cases[i].price
+        })
+
+        forms.forEach(form => {
+            form.addEventListener('change', e => {
+                sub = spec.cpu + spec.gpu + spec.ram + spec.storage + spec.case
+                subtotal.innerHTML = `Rp. ${sub.toLocaleString('en-US')}`
+                total.innerHTML = `Rp. ${(sub - (sub * currentDiscount)).toLocaleString('en-US')}`
+
+                if (spec.cpu && spec.gpu && spec.ram && spec.storage && spec.case) {
+                    checkoutBtn.removeAttribute('hidden')
+                }
+            })
+        })
+
+        let str = ""
+        voucherInput.addEventListener('keyup', e => {
+            str = voucherInput.value
+            updateVoucher(str)
+        })
+
+        const updateVoucher = str => {
+            for (const disc of discs) {
+                if (str === disc.name) {
+                    currentDiscount = disc.cut;
+                    cut.innerHTML = `${Math.floor(currentDiscount * 100)} %`
+                    total.innerHTML = `Rp. ${(sub - (sub * currentDiscount)).toLocaleString('en-US')}`
+                    break
+                } else {
+                    currentDiscount = 0
+                    cut.innerHTML = ""
+                }
+            }
+        }
+
+        if (sessionStorage.getItem('voucher')) {
+            voucherInput.value = sessionStorage.getItem('voucher')
+            updateVoucher(sessionStorage.getItem('voucher'))
+        }
+
+        platform.addEventListener('change', e => {
+            if (e.target.value == '1') {
+                cpu1.removeAttribute('hidden')
+                cpu2.removeAttribute('hidden')
+                cpu3.removeAttribute('hidden')
+                cpu4.setAttribute('hidden', '')
+                cpu5.setAttribute('hidden', '')
+                cpu6.setAttribute('hidden', '')
+                platformImg.setAttribute('src', 'https://zeevector.com/wp-content/uploads/Intel-Logo-Transparent-PNG-Vector.png')
+            } else if (e.target.value == '2') {
+                cpu1.setAttribute('hidden', '')
+                cpu2.setAttribute('hidden', '')
+                cpu3.setAttribute('hidden', '')
+                cpu4.removeAttribute('hidden')
+                cpu5.removeAttribute('hidden')
+                cpu6.removeAttribute('hidden')
+                platformImg.setAttribute('src', 'https://seeklogo.com/images/A/AMD-logo-B5E0D58D48-seeklogo.com.png')
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,28 +1,36 @@
 package main
 
 import (
+	"html/template"
+	"net/http"
 	"os"
-	"rakitin/handler"
 
-	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/middleware/encryptcookie"
-
-	"github.com/gofiber/fiber/v2/middleware/helmet"
-	"github.com/gofiber/fiber/v2/middleware/logger"
+	"github.com/go-chi/chi/v5"
+	"github.com/go-chi/chi/v5/middleware"
 	_ "github.com/joho/godotenv/autoload"
 )
 
 func main() {
-	app := fiber.New()
+	r := chi.NewRouter()
+	r.Use(middleware.Logger)
+	r.Use(middleware.Recoverer)
 
-	app.Use(logger.New(), helmet.New())
-	app.Use(encryptcookie.New(encryptcookie.Config{
-		Key: os.Getenv("COOKIE_KEY"),
-	}))
+	fs := http.FileServer(http.Dir("static"))
+	r.Handle("/static/*", http.StripPrefix("/static/", fs))
+	
+	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
+		tmpl, err := template.ParseFiles("./static/index.html")
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+		}
 
-	app.Post("/cookie", handler.SetCookie)
-	app.Get("/cookie", handler.GetCookie)
+		err = tmpl.Execute(w, nil)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+		}
+	})
 
-
-	app.Listen(":8080")
+	
+	
+	http.ListenAndServe(":" + os.Getenv("PORT"), r)
 }
